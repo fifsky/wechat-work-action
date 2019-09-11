@@ -1,0 +1,19 @@
+name: wechat
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: wechat-work robot message
+        uses: fifsky/wechat-work-action@master
+        with:
+          url: ${{ secrets.WECHATWORK_WEBHOOK}}
+          type: markdown
+          content: |
+            # Tips
+            ## Hello
+            > from github action message
+            > ^_^
