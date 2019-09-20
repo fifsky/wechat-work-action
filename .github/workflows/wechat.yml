@@ -17,3 +17,5 @@ jobs:
             ## Hello
             > from github action message
             > ^_^
+            - github: ${{ toJson(github) }}
+            - job status: ${{ job.status }}
