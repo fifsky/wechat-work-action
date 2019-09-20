@@ -17,9 +17,15 @@ with:
     ## Hello
     > from github action message
     > ^_^
+    - repository: ${{ github.repository }}
+    - committer: ${{ github.actor }}
+    - compare: [view](${{ github.event.compare }})
+    - job status: ${{ job.status }}
 ```
 
 🔐 Set your secrets here: `https://github.com/USERNAME/REPO/settings/secrets`.
+
+Contexts and expression syntax for GitHub Actions, here: https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions#github-context
 
 **Result**
 
