@@ -19,5 +19,5 @@ jobs:
             > ^_^
             - repository: ${{ github.repository }}
             - committer: ${{ github.actor }}
-            - compare: [view](${{ github.event.commits.url }})
+            - compare: [view](${{ github.event.compare }})
             - job status: ${{ job.status }}
