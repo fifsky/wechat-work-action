@@ -17,5 +17,8 @@ jobs:
             ## Hello
             > from github action message
             > ^_^
-            - github: ${{ toJson(github) }}
+            - repository: ${{ github.repository }}
+            - committer: ${{ github.actor }}
+            - sha: ${{ github.sha }}
+            - compare: [view](${{ github.compare }})
             - job status: ${{ job.status }}
